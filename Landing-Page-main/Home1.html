@@ -1,0 +1,374 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Web Template</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            background: url(https://prmceam.ac.in/wp-content/uploads/2017/05/background-learner1.jpg) no-repeat center center;
+            min-height: 30rem;
+        }
+
+        nav {
+            width: 100%;
+            height: 80px;
+            background-color: #0005;
+            line-height: 80px;
+        }
+
+        nav ul {
+            float: right;
+            margin: 0;
+            margin-right: 1.9rem;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .name h3 {
+            font-family: 'Baloo Bhai 2', cursive;
+            margin: 16px;
+            color: greenyellow;
+            font-size: 171%;
+        }
+
+        img {
+            border: 0px solid;
+            border-radius: 63px 71px 19px 73px;
+            width: 5%;
+            margin-left: 1.9rem;
+            margin-top: 1%;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(0, 132, 255);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .section {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 4%;
+        }
+
+        .section h1 {
+            color: rgba(20, 19, 18, 0.795);
+            text-align: center;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        .section p {
+            color: white;
+            text-align: center;
+        }
+
+        .marquee h3 {
+            color: red;
+        }
+
+        .btn-1 {
+            background-color: black;
+            text-align: center;
+            padding: 0.7rem 1rem;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .btn-1:hover {
+            background-color: orangered;
+        }
+
+        .features {
+            margin-top: 4%;
+            margin-bottom: 2%;
+        }
+
+        .features button {
+            padding: 0.7rem 2rem;
+            margin-right: 2rem;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            border-radius: 21px;
+            border: 3px solid silver;
+        }
+
+        .features button:hover {
+            color: red;
+        }
+
+        .showcase h1 {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        #courses,
+        #events,
+        #gallery {
+            display: none;
+        }
+
+        #courses {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        #courses img {
+            width: 200px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            margin: auto;
+        }
+
+        .apply {
+            margin-top: 4%;
+            background-color: black;
+            padding: 0.7rem 1rem;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .apply:hover {
+            background-color: blue;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.2rem;
+            margin-top: 4%;
+        }
+
+        .icons ion-icon {
+            color: #fff;
+            font-size: 30px;
+            transition: 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: blue;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        #contactForm {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .header1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+
+<body>
+
+    <div class="wrapper">
+        <!--NAVIGATION-->
+        <nav>
+            <img src="https://st2.depositphotos.com/1378583/9958/v/950/depositphotos_99587952-stock-illustration-computer-education-logo.jpg" class="img" alt="logo">
+
+            <ul>
+                <li><a href="#" onclick="showSection('home')">HOME</a></li>
+                <li><a href="#" onclick="showSection('about')">ABOUT</a></li>
+                <li><a href="#" onclick="showSection('courses')">COURSES</a></li>
+                <li><a href="#" onclick="showSection('events')">EVENTS</a></li>
+                <li><a href="#" onclick="showSection('gallery')">GALLERY</a></li>
+                <li><a href="#" onclick="showSection('blog')">BLOG</a></li>
+                <li><a href="#" onclick="showSection('contact')">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!--END OF NAVIGATION-->
+        <div class="name">
+            <h3>EduLearn</h3>
+        </div>
+
+        <div class="section" id="home">
+            <h1>Education is the key to Success</h1>
+            <marquee class="mar">
+                <p>Education is the most powerful weapon which you can use to change world</p>
+            </marquee>
+
+            <a href="#"><button class="btn-1">GET STARTED</button></a>
+            <!--FEATURES-->
+            <div class="features">
+                <button>Featured</button>
+                <button>Search</button>
+                <button>My Learning</button>
+                <button>Wishlist</button>
+                <button>Account</button>
+            </div>
+            <div class="marquee">
+                <marquee behavior="scroll" direction="right" scrollamount="15" scrolldelay="85" style="border" loop="-1">
+                    <h3>Learn With Confidence!!</h3>
+                </marquee>
+            </div>
+        </div>
+        <!--END OF SECTION-->
+    </div>
+    <!--END OF WRAPPER-->
+
+    <!--SHOWCASE-->
+    <div class="showcase" id="courses">
+        <h1 class="header1">POPULAR COURSES WE OFFER</h1>
+        <div id="courses-content">
+            <div class="cs">
+                <h3>Python</h3>
+                <img src="python.jpg" width="50%" alt="cs">
+                <a href="#"><button class="apply" onclick="showContactForm()">Apply Here</button></a>
+            </div>
+            <div class="business">
+                <h3>Web Development</h3>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.xi_VY54V535hztHz11VTyQHaFL&pid=Api&P=0&w=247&h=173" alt="business">
+                <a href="#"><button class="apply" onclick="showContactForm()">Apply Here</button></a>
+            </div>
+            <div class="journalism">
+                <h3>Data Science</h3>
+                <img src="https://tse3.mm.bing.net/th?id=OIP.zv94BqcK-uT2sF-Ib-W7QwHaGT&pid=Api&P=0&w=195&h=166" alt="media">
+                <a href="#"><button class="apply" onclick="showContactForm()">Apply Here</button></a>
+            </div>
+            <div class="arts">
+                <h3>Cloud Computing</h3>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.UgK4NIFYB_DA-RWM8z60NQHaE8&pid=Api&P=0&w=229&h=152" alt="arts">
+                <a href="#"><button class="apply" onclick="showContactForm()">Apply Here</button></a>
+            </div>
+            <div class="medical">
+                <h3>Machine Learning</h3>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.DIx2XovlTkU8O2fljPRxtAHaDg&pid=Api&P=0&w=369&h=175" alt="ms">
+                <a href="#"><button class="apply" onclick="showContactForm()">Apply Here</button></a>
+            </div>
+        </div>
+    </div>
+    <!--END OF SHOWCASE-->
+
+    <!--EVENTS-->
+    <div id="events" class="section">
+        <h1 class="header1">UPCOMING EVENTS</h1>
+        <p>Details about upcoming events will be displayed here.</p>
+    </div>
+    <!--END OF EVENTS-->
+
+    <!--GALLERY-->
+    <div id="gallery" class="section">
+        <h1 class="header1">GALLERY</h1>
+        <p>Photos and videos will be displayed here.</p>
+    </div>
+    <!--END OF GALLERY-->
+
+    <!--CONTACT US-->
+    <div id="contactForm">
+        <h1 class="header">CONTACT US</h1>
+        <form id="contactFormDetails">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="course">Course Name:</label>
+            <select id="course" name="course" required>
+                <option value="Select Course">Select Course</option>
+                <option value="python">Python</option>
+                <option value="webDevelopment">Web Development</option>
+                <option value="dataScience">Data Science</option>
+                <option value="cloudComputing">Cloud Computing</option>
+                <option value="machineLearning">Machine Learning</option>
+            </select>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+
+            <button type="button" onclick="submitForm()">Apply</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+        </div>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </footer>
+    <script>
+        function showContactForm() {
+            document.getElementById('contactForm').style.display = 'block';
+        }
+
+        function submitForm() {
+            alert('Apply successfully');
+        }
+
+        function showSection(sectionId) {
+            // Hide all sections
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('courses').style.display = 'none';
+            document.getElementById('events').style.display = 'none';
+            document.getElementById('gallery').style.display = 'none';
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Initialize by showing the home section
+        showSection('home');
+    </script>
+
+</body>
+
+</html>
